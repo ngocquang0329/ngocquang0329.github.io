@@ -1,13 +1,17 @@
 :root {
-    /* Bảng màu sắc xanh theo phong cách Richard Doyle */
-    --primary-teal: #1b5e6b;      /* Màu xanh chủ đạo cho tiêu đề & điểm nhấn */
-    --primary-teal-dark: #12434d; /* Màu xanh đậm cho hover & tên chính */
-    --teal-subtle: #edf4f5;       /* Nền xanh nhạt dịu cho các thẻ thông tin */
-    --teal-border: #cde0e3;       /* Viền xanh pastel nhẹ */
-    --text-main: #2b3338;         /* Màu chữ chính xám đen dịu mắt */
-    --text-muted: #5e6d75;        /* Màu chữ phụ xám khói */
-    --bg-page: #ffffff;           /* Nền trang trắng */
-    --max-width: 740px;
+    /* Màu chữ: đen chuẩn cho nội dung thường, xanh sẫm cho tiêu đề */
+    --text-main: #111111;
+    --text-muted: #333333;
+    --heading-green: #1b4332;       /* Xanh lá rừng trầm trang nhã */
+    --link-color: #111111;
+
+    /* Sắc xanh lá nhạt cho nền và viền */
+    --bg-page: #f2f6f3;             /* Nền toàn trang phảng phất xanh sage nhẹ */
+    --card-bg: #ffffff;             /* Nền thẻ màu trắng ngà rất nhẹ để tương phản */
+    --sub-card-bg: #eaf1ec;         /* Nền các ô con ngả xanh dịu */
+    --border-line: #d3e2d7;         /* Đường viền xanh rêu nhạt */
+    --border-accent: #52b788;       /* Điểm nhấn viền xanh tươi */
+    --max-width: 720px;
 }
 
 * {
@@ -17,12 +21,12 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
     color: var(--text-main);
     background-color: var(--bg-page);
-    padding: 48px 20px;
+    padding: 40px 16px;
 }
 
 .container {
@@ -30,45 +34,75 @@ body {
     margin: 0 auto;
 }
 
-/* Header profile */
+/* Định dạng từng Ô nội dung lớn (Card) */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-line);
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(27, 67, 50, 0.04);
+}
+
+/* Tiêu đề màu xanh lá sẫm */
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--heading-green);
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-line);
+    padding-bottom: 8px;
+}
+
+/* Chữ thường màu đen */
+.card p {
+    margin-bottom: 14px;
+    color: var(--text-main);
+    text-align: justify;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Header Profile Card */
 .profile-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 32px;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 2px solid var(--teal-border);
+    align-items: center;
+    gap: 24px;
 }
 
 .profile-info h1 {
-    font-size: 1.8rem;
+    font-size: 1.65rem;
     font-weight: 600;
     line-height: 1.3;
-    color: var(--primary-teal-dark);
+    color: var(--heading-green);
     margin-bottom: 6px;
 }
 
 .profile-info .subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .contact-info p {
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    text-align: left;
+    color: var(--text-main);
 }
 
 .contact-info a {
-    color: var(--primary-teal);
-    font-weight: 500;
-    text-decoration: none;
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .contact-info a:hover {
-    color: var(--primary-teal-dark);
-    text-decoration: underline;
+    color: var(--heading-green);
 }
 
 .profile-image img {
@@ -76,91 +110,90 @@ body {
     height: 140px;
     object-fit: cover;
     border-radius: 6px;
-    border: 1px solid var(--teal-border);
+    border: 1px solid var(--border-line);
 }
 
-/* Thông báo trạng thái tiếp nhận */
+/* Ô thông báo tình trạng */
 .availability-notice {
-    background-color: var(--teal-subtle);
-    border-left: 4px solid var(--primary-teal);
-    color: var(--primary-teal-dark);
-    padding: 14px 18px;
-    margin-bottom: 32px;
-    border-radius: 0 6px 6px 0;
+    background-color: var(--sub-card-bg);
+    border-left: 5px solid var(--border-accent);
+    padding: 16px 20px;
+}
+
+.availability-notice p {
+    margin: 0;
+    color: var(--text-main);
     font-size: 0.95rem;
 }
 
-/* Lưới thông tin thời lượng, tần suất, hình thức */
+/* Lưới 4 ô con bên trong */
 .details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 36px;
+    gap: 14px;
+    margin-bottom: 24px;
 }
 
-.detail-card {
-    background-color: var(--teal-subtle);
-    border: 1px solid var(--teal-border);
+.sub-card {
+    background-color: var(--sub-card-bg);
+    border: 1px solid var(--border-line);
     border-radius: 6px;
-    padding: 16px 18px;
+    padding: 14px 16px;
 }
 
-.detail-card h3 {
+.sub-card h3 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--primary-teal);
-    font-weight: 600;
-    margin-bottom: 6px;
+    color: var(--heading-green);
+    margin-bottom: 4px;
 }
 
-.detail-card p {
+.sub-card p {
     font-size: 0.95rem;
+    margin: 0;
+    text-align: left;
     color: var(--text-main);
 }
 
-/* Bảng chi phí (Sliding Scale) */
+/* Khu vực hiển thị bảng phí */
 .fee-section {
-    background-color: #fafcfc;
-    border: 1px solid var(--teal-border);
-    border-radius: 6px;
-    padding: 24px;
-    margin-bottom: 36px;
+    border-top: 1px solid var(--border-line);
+    padding-top: 20px;
 }
 
-.fee-section h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary-teal);
-    margin-bottom: 18px;
+.fee-section h3 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    color: var(--heading-green);
 }
 
 .fee-levels {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .fee-item {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 12px 16px;
-    background-color: #ffffff;
-    border: 1px solid var(--teal-border);
-    border-radius: 4px;
+    padding: 10px 14px;
+    background-color: var(--sub-card-bg);
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
     gap: 16px;
 }
 
 .fee-item.highlight {
-    background-color: var(--teal-subtle);
-    border: 1px dashed var(--primary-teal);
+    border-style: dashed;
+    border-color: var(--border-accent);
 }
 
 .fee-range {
     font-weight: 600;
-    color: var(--primary-teal-dark);
-    font-size: 1rem;
+    color: var(--text-main);
+    font-size: 0.95rem;
     white-space: nowrap;
 }
 
@@ -171,36 +204,17 @@ body {
 }
 
 .footnote {
-    margin-top: 14px;
+    margin-top: 12px;
     font-size: 0.85rem;
     color: var(--text-muted);
-}
-
-/* Khối nội dung bài viết */
-.content-section {
-    margin-bottom: 36px;
-}
-
-.content-section h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 14px;
-    color: var(--primary-teal);
-    border-bottom: 1px solid var(--teal-border);
-    padding-bottom: 6px;
-}
-
-.content-section p {
-    margin-bottom: 14px;
-    color: #2b3338;
-    text-align: justify;
+    text-align: left !important;
 }
 
 /* Danh sách khó khăn */
 .concerns-list {
     margin-left: 20px;
-    margin-bottom: 16px;
-    color: #2b3338;
+    margin-top: 8px;
+    color: var(--text-main);
 }
 
 .concerns-list li {
@@ -210,53 +224,38 @@ body {
 
 /* Đào tạo */
 .education-item {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
 }
 
 .education-item h3 {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--text-main);
+    color: var(--heading-green);
     margin-bottom: 2px;
 }
 
 .education-item .institution {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: var(--text-main);
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .edu-note {
     font-size: 0.85rem;
     color: var(--text-muted);
     margin-top: 4px;
-}
-
-/* Khung Đạo đức & Giám sát */
-.standards-box {
-    background-color: var(--teal-subtle);
-    border: 1px solid var(--teal-border);
-    border-radius: 6px;
-    padding: 20px 22px;
-}
-
-.standards-box h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.standards-box p {
     text-align: left;
-}
-
-.standards-box p:last-child {
-    margin-bottom: 0;
 }
 
 /* Chân trang */
 .site-footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--teal-border);
+    margin-top: 36px;
+    padding-top: 20px;
     font-size: 0.85rem;
     color: var(--text-muted);
     text-align: center;
@@ -266,17 +265,25 @@ body {
     margin-bottom: 4px;
 }
 
-/* Tối ưu khi xem trên điện thoại */
+/* Tối ưu màn hình điện thoại */
 @media (max-width: 640px) {
     body {
-        padding: 24px 16px;
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 20px 16px;
+        margin-bottom: 16px;
     }
 
     .profile-header {
         flex-direction: column-reverse;
-        align-items: center;
         text-align: center;
-        gap: 20px;
+        gap: 16px;
+    }
+
+    .contact-info p {
+        text-align: center;
     }
 
     .profile-image img {
@@ -298,7 +305,7 @@ body {
         text-align: left;
     }
 
-    .content-section p {
+    .card p {
         text-align: left;
     }
 }
