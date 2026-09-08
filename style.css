@@ -6,8 +6,8 @@
     --link-color: #111111;
 
     /* Màu nền: Nền toàn trang trắng, nền ô mang sắc xanh nhẹ */
-    --bg-page: #ffffff;             /* Nền trang màu trắng */
-    --card-bg: #f4f8f5;             /* Nền các ô lớn xanh lá rất nhạt */
+    --bg-page: #f4f8f5;             /* Nền trang màu trắng */
+    --card-bg: #ffffff;             /* Nền các ô lớn xanh lá rất nhạt */
     --sub-card-bg: #eaf2ec;         /* Nền các ô con ngả xanh đậm hơn một chút */
     --border-line: #d8e5dc;         /* Đường viền xanh xám thanh mảnh */
     --border-accent: #40916c;       /* Điểm nhấn viền */
