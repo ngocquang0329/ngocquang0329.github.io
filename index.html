@@ -7,7 +7,7 @@
     <meta name="description" content="Trang thông tin thực hành trị liệu tâm lý Thân chủ Trọng tâm (Client-Centered Therapy) của ThS. Kiến Minh Nguyễn Ngọc Quang.">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Schema.org định danh chuyên gia cho công cụ tìm kiếm -->
+    <!-- Schema.org định danh chuyên gia cho SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,8 +36,8 @@
 </head>
 <body>
     <main class="container">
-        <!-- Phần mở đầu & Thông tin liên hệ -->
-        <header class="profile-header">
+        <!-- Ô 1: Header Profile -->
+        <header class="card profile-header">
             <div class="profile-info">
                 <h1>ThS. Kiến Minh Nguyễn Ngọc Quang</h1>
                 <p class="subtitle">Nhà Trị liệu Thân chủ Trọng tâm (Client-Centered Therapist)</p>
@@ -51,82 +51,85 @@
             </div>
         </header>
 
-        <!-- Trạng thái tiếp nhận -->
-        <section class="availability-notice">
+        <!-- Ô 2: Trạng thái tiếp nhận -->
+        <section class="card availability-notice">
             <p><strong>Tình trạng tiếp nhận:</strong> Hiện tại tôi đang có lịch trống để tiếp nhận thân chủ mới.</p>
         </section>
 
-        <!-- Khung tóm tắt cấu trúc phiên tham vấn -->
-        <section class="details-grid">
-            <div class="detail-card">
-                <h3>Thời lượng</h3>
-                <p>Mỗi phiên tham vấn kéo dài <strong>50 phút</strong>.</p>
+        <!-- Ô 3: Thông tin phiên & Chi phí (gồm 4 ô con bên trong + bảng phí) -->
+        <section class="card">
+            <h2>Thông tin phiên & Chi phí</h2>
+            
+            <div class="details-grid">
+                <div class="sub-card">
+                    <h3>Thời lượng</h3>
+                    <p>Mỗi phiên kéo dài <strong>50 phút</strong>.</p>
+                </div>
+                <div class="sub-card">
+                    <h3>Tần suất</h3>
+                    <p>Hàng tuần, mỗi hai tuần một buổi, hoặc theo nhu cầu của bạn.</p>
+                </div>
+                <div class="sub-card">
+                    <h3>Số lượng phiên</h3>
+                    <p>Linh hoạt theo nhu cầu. Bạn quyết định thời điểm kết thúc.</p>
+                </div>
+                <div class="sub-card">
+                    <h3>Phương thức</h3>
+                    <p>Trực tuyến qua <strong>Google Meet</strong>.</p>
+                </div>
             </div>
-            <div class="detail-card">
-                <h3>Tần suất</h3>
-                <p>Hàng tuần, mỗi hai tuần một buổi, hoặc tùy thuộc vào nhu cầu của bạn.</p>
-            </div>
-            <div class="detail-card">
-                <h3>Số lượng phiên</h3>
-                <p>Hoàn toàn linh hoạt theo nhu cầu. Bạn là người quyết định thời điểm kết thúc tiến trình.</p>
-            </div>
-            <div class="detail-card">
-                <h3>Phương thức</h3>
-                <p>Trực tuyến qua <strong>Google Meet</strong>.</p>
+
+            <div class="fee-section">
+                <h3>Chi phí mỗi phiên</h3>
+                <div class="fee-levels">
+                    <div class="fee-item">
+                        <span class="fee-range">600.000đ – 1.000.000đ</span>
+                        <span class="fee-desc">Tùy theo khả năng chi trả của bạn</span>
+                    </div>
+                    <div class="fee-item">
+                        <span class="fee-range">400.000đ – 600.000đ</span>
+                        <span class="fee-desc">Dành cho bạn nếu đang gặp khó khăn về tài chính</span>
+                    </div>
+                    <div class="fee-item highlight">
+                        <span class="fee-range">0đ – 350.000đ *</span>
+                        <span class="fee-desc">Dành cho bạn nếu khả năng tài chính rất hạn chế</span>
+                    </div>
+                </div>
+                <p class="footnote"><em>* Hiện tại tôi có thể hỗ trợ mức phí này với tối đa 12 phiên cho 01 thân chủ.</em></p>
             </div>
         </section>
 
-        <!-- Chi phí (Sliding scale) -->
-        <section class="fee-section">
-            <h2>Chi phí mỗi phiên</h2>
-            <div class="fee-levels">
-                <div class="fee-item">
-                    <div class="fee-range">600.000đ – 1.000.000đ</div>
-                    <div class="fee-desc">Tùy theo khả năng chi trả của bạn</div>
-                </div>
-                <div class="fee-item">
-                    <div class="fee-range">400.000đ – 600.000đ</div>
-                    <div class="fee-desc">Dành cho bạn nếu đang gặp khó khăn về tài chính</div>
-                </div>
-                <div class="fee-item highlight">
-                    <div class="fee-range">0đ – 350.000đ *</div>
-                    <div class="fee-desc">Dành cho bạn nếu khả năng tài chính rất hạn chế</div>
-                </div>
-            </div>
-            <p class="footnote"><em>* Hiện tại tôi có thể hỗ trợ mức phí này với tối đa 12 phiên cho một thân chủ.</em></p>
-        </section>
-
-        <!-- Thực hành trị liệu -->
-        <section class="content-section">
+        <!-- Ô 4: Thực hành trị liệu -->
+        <section class="card">
             <h2>Thực hành trị liệu</h2>
-            <p>Khi đồng hành cùng các thân chủ có khó khăn tâm lý, tôi thực hành tiếp cận <strong>Trị liệu Thân chủ Trọng tâm (Client-Centered Therapy)</strong>.</p>
-            <p>Tôi hướng đến việc hiện diện một cách chân thật, chấp nhận và thấu cảm. Tôi đón nhận, chú tâm lắng nghe và nỗ lực thấu hiểu những cảm nhận cùng suy tư của bạn, đồng thời chủ động đặt qua một bên những đánh giá hay phán xét mang tính áp đặt từ bên ngoài.</p>
-            <p>Qua sự hiện diện ấy, tôi hy vọng mang lại cho bạn một không gian an toàn và tự do—nơi bạn có thể tự khám phá, trải nghiệm và sử dụng theo bất cứ cách nào phù hợp nhất với chính mình.</p>
+            <p>Khi trợ giúp các thân chủ có khó khăn tâm lý, tôi thực hành tiếp cận <strong>Trị liệu Thân chủ Trọng tâm (Client-Centered Therapy)</strong>.</p>
+            <p>Tôi hướng đến việc hiện diện một cách chân thật, chấp nhận và thấu cảm với thân chủ. Tôi đón nhận, chú tâm lắng nghe và cố gắng hiểu được những cảm nhận cùng suy tư của bạn, đồng thời chủ động đặt qua một bên những đánh giá và phán xét.</p>
+            <p>Tôi hy vọng qua đó có thể mang lại cho bạn một không gian an toàn và tự do để bạn có thể trải nghiệm và sử dụng theo bất cứ cách nào thấy thích hợp với bản thân.</p>
         </section>
 
-        <!-- Những khó khăn từng trợ giúp -->
-        <section class="content-section">
-            <h2>Những khó khăn tôi từng trợ giúp</h2>
-            <p>Tôi từng làm việc và đồng hành cùng các thân chủ trải qua:</p>
+        <!-- Ô 5: Những khó khăn từng trợ giúp -->
+        <section class="card">
+            <h2>Những khó khăn từng trợ giúp</h2>
+            <p>Tôi từng đồng hành cùng các thân chủ trải qua những khó khăn như:</p>
             <ul class="concerns-list">
                 <li>Căng thẳng kéo dài, kiệt sức (burnout), cảm giác chênh vênh</li>
                 <li>Trầm buồn, lo âu, rối bời trong cảm xúc</li>
                 <li>Cảm thấy tệ về bản thân, có xu hướng tự chỉ trích và phán xét chính mình</li>
-                <li>Khó bày tỏ cảm xúc và nhu cầu cá nhân; luôn nỗ lực làm hài lòng người khác (people-pleasing)</li>
-                <li>Trục trặc, bế tắc hoặc mâu thuẫn trong các mối quan hệ</li>
-                <li>Khó chịu, tự ti hoặc xung đột với hình ảnh cơ thể</li>
-                <li>Nỗi đau mất mát, các trải nghiệm sang chấn</li>
-                <li>Hành vi tự gây thương tích và suy nghĩ tự sát</li>
+                <li>Khó bày tỏ các cảm nghĩ và nhu cầu với người khác; luôn cố gắng làm hài lòng người khác (people-pleasing)</li>
+                <li>Trục trặc hoặc bế tắc trong các mối quan hệ</li>
+                <li>Khó chịu hoặc xung đột với hình ảnh cơ thể</li>
+                <li>Mất mát, trải nghiệm sang chấn</li>
+                <li>Hành vi tự gây thương tích và ý nghĩ tự sát</li>
             </ul>
         </section>
 
-        <!-- Đào tạo chuyên môn -->
-        <section class="content-section">
-            <h2>Đào tạo chuyên môn</h2>
+        <!-- Ô 6: Đào tạo chuyên môn -->
+        <section class="card">
+            <h2>Đào tạo</h2>
             <div class="education-item">
                 <h3>Thạc sỹ về Tham vấn và Trị liệu Tâm lý *</h3>
                 <p class="institution">Đại học Strathclyde, Vương quốc Anh</p>
-                <p class="edu-note"><em>* Chương trình được chứng thực bởi Hiệp hội Tham vấn và Trị liệu Tâm lý Vương quốc Anh (British Association for Counselling and Psychotherapy - BACP).</em></p>
+                <p class="edu-note"><em>* Chương trình được chứng thực bởi Hiệp hội Tham vấn và Trị liệu Tâm lý Vương quốc Anh (British Association for Counselling and Psychotherapy, BACP).</em></p>
             </div>
             <div class="education-item">
                 <h3>Thạc sỹ về Phát triển và Xã hội hoá ở Trẻ em và Thanh thiếu niên</h3>
@@ -138,16 +141,16 @@
             </div>
         </section>
 
-        <!-- Khung đạo đức & Giám sát -->
-        <section class="content-section standards-box">
-            <h2>Đạo đức nghề nghiệp & Giám sát</h2>
-            <p><strong>Khung đạo đức:</strong> Quá trình thực hành của tôi tuân thủ theo Khung đạo đức nghề nghiệp của BACP (Ethical Framework for the Counselling Professions), được điều chỉnh phù hợp với bối cảnh văn hóa và xã hội Việt Nam.</p>
-            <p><strong>Giám sát chuyên môn:</strong> Tôi duy trì thực hành dưới sự giám sát định kỳ của một nhà trị liệu có kinh nghiệm tại Vương quốc Anh nhằm đảm bảo tính an toàn, khách quan và phẩm chất trong tiến trình làm việc cùng thân chủ.</p>
+        <!-- Ô 7: Đạo đức nghề nghiệp & Giám sát -->
+        <section class="card">
+            <h2>Đạo đức & Giám sát</h2>
+            <p><strong>Khung đạo đức:</strong> Việc thực hành của tôi tuân thủ theo Khung đạo đức nghề nghiệp của BACP, phù hợp với bối cảnh văn hóa và xã hội Việt Nam.</p>
+            <p><strong>Giám sát chuyên môn:</strong> Tôi thực hành dưới sự giám sát định kỳ của một nhà trị liệu có kinh nghiệm tại Vương quốc Anh nhằm duy trì phẩm chất và sự an toàn trong tiến trình trị liệu.</p>
         </section>
 
-        <!-- Footer -->
+        <!-- Chân trang -->
         <footer class="site-footer">
-            <p>Trang web này không thu thập dữ liệu cá nhân hay sử dụng cookie theo dõi.</p>
+            <p>Trang web này không thu thập dữ liệu cá nhân hay sử dụng bất kỳ cookie nào.</p>
             <p>&copy; 2026 ThS. Kiến Minh Nguyễn Ngọc Quang. All rights reserved.</p>
         </footer>
     </main>
