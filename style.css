@@ -1,16 +1,16 @@
 :root {
-    /* Màu chữ: đen chuẩn cho nội dung thường, xanh sẫm cho tiêu đề */
+    /* Màu chữ: Đen chuẩn cho nội dung thường, xanh đậm cho tiêu đề */
     --text-main: #111111;
     --text-muted: #333333;
-    --heading-green: #1b4332;       /* Xanh lá rừng trầm trang nhã */
+    --heading-green: #1b4332;       /* Xanh đậm sang trọng */
     --link-color: #111111;
 
-    /* Sắc xanh lá nhạt cho nền và viền */
-    --bg-page: #f2f6f3;             /* Nền toàn trang phảng phất xanh sage nhẹ */
-    --card-bg: #ffffff;             /* Nền thẻ màu trắng ngà rất nhẹ để tương phản */
-    --sub-card-bg: #eaf1ec;         /* Nền các ô con ngả xanh dịu */
-    --border-line: #d3e2d7;         /* Đường viền xanh rêu nhạt */
-    --border-accent: #52b788;       /* Điểm nhấn viền xanh tươi */
+    /* Màu nền: Nền toàn trang trắng, nền ô mang sắc xanh nhẹ */
+    --bg-page: #ffffff;             /* Nền trang màu trắng */
+    --card-bg: #f4f8f5;             /* Nền các ô lớn xanh lá rất nhạt */
+    --sub-card-bg: #eaf2ec;         /* Nền các ô con ngả xanh đậm hơn một chút */
+    --border-line: #d8e5dc;         /* Đường viền xanh xám thanh mảnh */
+    --border-accent: #40916c;       /* Điểm nhấn viền */
     --max-width: 720px;
 }
 
@@ -41,10 +41,10 @@ body {
     border-radius: 8px;
     padding: 28px;
     margin-bottom: 24px;
-    box-shadow: 0 1px 3px rgba(27, 67, 50, 0.04);
+    box-shadow: 0 1px 3px rgba(27, 67, 50, 0.03);
 }
 
-/* Tiêu đề màu xanh lá sẫm */
+/* Tiêu đề xanh đậm */
 .card h2 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -241,14 +241,14 @@ body {
 .education-item .institution {
     font-size: 0.95rem;
     color: var(--text-main);
-    margin-bottom: 0;
+    margin-bottom: 2px;
     text-align: left;
 }
 
 .edu-note {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: 4px;
+    font-size: 0.88rem;
+    color: #4a5568;
+    margin-top: 2px;
     text-align: left;
 }
 
